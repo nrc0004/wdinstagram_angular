@@ -1,0 +1,16 @@
+<h1> WDI Instas</h1>
+
+  <div ng-repeat="wdi in vm.wdis">
+    <p>{{$index + 1}}. <img ng-src="{{wdi.photo_url}}"> </br> {{wdi.author}} </br>
+    {{wdi.body}}</p>
+  </div>
+
+  <h2>Create new Insta</h2>
+
+<form ng-submit="vm.create()">
+  <input placeholder="photoUrl" ng-model="vm.newWdi.photo_url">
+  <input placeholder="body" ng-model="vm.newWdi.body">
+  <input placeholder="Author" ng-model="vm.newWdi.author"></br>
+
+  <button type="submit">Create Insta</button>
+</form>
